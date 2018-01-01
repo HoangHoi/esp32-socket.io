@@ -343,7 +343,7 @@ void ESP32SocketIOClient::sendHandshake() {
         request += F("\r\n");
     }
     request += F("Origin: Arduino\r\n");
-    request += F("Connexion: keep-alive\r\n\r\n");
+    request += F("Connection: keep-alive\r\n\r\n");
     ECHO(F("\r\n[sendHandshake] Send request........................."));
     ECHO(request);
     ECHO(F("[sendHandshake] .........................send request done\r\n"));
@@ -478,7 +478,7 @@ void ESP32SocketIOClient::sendRequestAuthenticate() {
     request += F("Content-Length: ");
     request += body.length();
     request += F("\r\n");
-    request += F("Connexion: keep-alive\r\n\r\n");
+    request += F("Connection: keep-alive\r\n\r\n");
     request += body;
     request += "\r\n\r\n";
 
